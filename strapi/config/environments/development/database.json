@@ -1,0 +1,19 @@
+{
+  "defaultConnection": "default",
+  "connections": {
+    "default": {
+      "connector": "mongoose",
+      "settings": {
+        "client": "mongo",
+        "host": "p-mongo",
+        "port": "27017",
+        "database": "strapidb",
+        "username": "admin",
+        "password": "adminpwd"
+      },
+      "options": {
+        "ssl": false
+      }
+    }
+  }
+}
