@@ -1,0 +1,35 @@
+import { Meta, Story, Preview, Code, Props } from '@storybook/addon-docs/blocks';
+import { MediumText } from './text.stories';
+// import Button from '../../components/atoms/button';
+
+<Meta title="Atoms|MediumText" component={MediumText} />
+
+# MediumText
+
+<div style={{ display: 'flex', flexDirection: 'column' }}>
+  <MediumText />
+</div>
+
+Now let's see in details !
+
+```javascript
+<MediumText />
+```
+
+# Story Component
+
+<Story name="Small <MediumText /> story">
+  <MediumText/>
+</Story>
+
+# Preview Component
+
+<Preview>
+  <Story name="Small <MediumText /> preview">
+    <MediumText />
+  </Story>
+</Preview>
+
+# Props
+
+<Props of={MediumText} />
