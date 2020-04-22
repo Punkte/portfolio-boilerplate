@@ -6,18 +6,44 @@ import {
   Small,
 } from './title.stories.js'
 import Title from '../../components/atoms/Title'
+import { Spacer } from '../utils'
+
 
 <Meta title="Atoms|Title" component={Title} />
 
-# Title Component
+# Title
+
+<Spacer size="32px" />
+<ExtraLargeTitle>Extra-large Title</ExtraLargeTitle>
+
+```javascript
+  <Title size="extra-large">Extra large title</Title>
+```
+
+# Preview
 
 <Preview>
-  <Story name="Title variants">
-    <div>
-      <ExtraLargeTitle>Extra-large Title</ExtraLargeTitle>
-      <LargeTitle>Large Title</LargeTitle>
-      <Medium>Medium Title</Medium>
-      <Small>Small Title</Small>
-    </div>
+  <Story name="Extra large title">
+    <Title size="extra-large">Extra large title</Title>
   </Story>
 </Preview>
+
+<Preview>
+  <Story name="Large title">
+    <Title size="large">Large title</Title>
+  </Story>
+</Preview>
+
+<Preview>
+  <Story name="Medium title">
+    <Title size="medium">Medium title</Title>
+  </Story>
+</Preview>
+
+<Preview>
+  <Story name="Small title">
+    <Title size="small">Small title</Title>
+  </Story>
+</Preview>
+
+<Props of={Title} />

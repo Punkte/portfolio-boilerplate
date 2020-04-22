@@ -2,7 +2,7 @@ import React from 'react'
 import Title from '../../components/atoms/Title'
 
 
-export const ExtraLargeTitle = () => <Title size='extra-large'>An extra large title</Title>
-export const LargeTitle = () => <Title size='large'>A large title</Title>
-export const Medium = () => <Title size='medium'>A medium title</Title>
-export const Small = () => <Title size='small'>A small title</Title>
+export const ExtraLargeTitle = ({ children, ...props }) => <Title size='extra-large' data-testid="extra-large-title" {...props}>{children}</Title>
+export const LargeTitle = ({ children, ...props }) => <Title size='large' data-testid="large-title" {...props}>{children}</Title>
+export const Medium = ({ children, ...props }) => <Title size='medium' data-testid="medium-title" {...props}>{children}</Title>
+export const Small = ({ children, ...props }) => <Title size='small' data-testid="small-title" {...props}>{children}</Title>

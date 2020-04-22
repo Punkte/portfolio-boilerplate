@@ -8,27 +8,42 @@ const StyledInputBox = styled.div`
   cursor: text;
 `
 const StyledBar = styled.span`
-  display: inline-block;
-  height: 2px;
+  position: relative;
+  display: block;
+  margin-top: 8px;
+  height: 1px;
   width: 100%;
 
   background-color: ${colors["ligh-grey"]};
   color: ${colors["ligh-grey"]};
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: ${colors.black};
+    transition: transform .2s ease;
+    transform-origin: left;
+    transform: scaleX(0);
+  }
 `
 const StyledInput = styled.input`
+  display: block;
+  width: 100%;
   font-family: 'Circe', Arial, Helvetica, sans-serif;
   font-size: 20px;
   border: none;
   outline: none;
   &:focus {
-    color: ${colors.black}
+    color: ${colors.black};
     & + ${StyledBar} {
-      background-color: ${colors.black};
+      &::before {
+        transform: scaleX(1);
+      }
     }
   }
 `
-
-
 
 const Input = (props) => {
   const inputEl = useRef(null);

@@ -43,6 +43,7 @@ const StyledButton = styled.button`
   cursor: pointer;
   position: relative;
   transition: all 0.2s ease-in-out;
+  outline: none;
   &:after {
     content: "";
     position: absolute;
@@ -75,12 +76,12 @@ Button.defaultProps = {
   variant: "default"
 }
 
-Button.ropTypes = {
+Button.propTypes = {
   variant: PropTypes.oneOf([
     'navlink',
     'default'
   ]),
-  children: PropTypes.element.isRequired
+  children: PropTypes.oneOfType([PropTypes.element, PropTypes.string])
 };
 
 export default Button;

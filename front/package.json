@@ -41,7 +41,8 @@
     "@storybook/addon-docs": "^5.3.18",
     "@storybook/preset-create-react-app": "^2.1.1",
     "@storybook/react": "^5.3.18",
-    "babel-loader": "^8.1.0"
+    "babel-loader": "^8.1.0",
+    "jest-styled-components": "^7.0.2"
   },
   "jest": {
     "collectCoverageFrom": [

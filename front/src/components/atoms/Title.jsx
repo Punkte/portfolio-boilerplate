@@ -32,7 +32,7 @@ Title.propTypes = {
     'medium',
     'small',
   ]),
-  children: PropTypes.element.isRequired
+  children: PropTypes.element
 };
 
 export default Title
