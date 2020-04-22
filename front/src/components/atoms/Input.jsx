@@ -17,6 +17,7 @@ const StyledBar = styled.span`
 `
 const StyledInput = styled.input`
   font-family: 'Circe', Arial, Helvetica, sans-serif;
+  font-size: 20px;
   border: none;
   outline: none;
   &:focus {
