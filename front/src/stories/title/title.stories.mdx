@@ -1,0 +1,23 @@
+import { Meta, Story, Preview, Code, Props } from '@storybook/addon-docs/blocks';
+import { 
+  ExtraLargeTitle,
+  LargeTitle,
+  Medium,
+  Small,
+} from './title.stories.js'
+import Title from '../../components/atoms/Title'
+
+<Meta title="Atoms|Title" component={Title} />
+
+# Title Component
+
+<Preview>
+  <Story name="Title variants">
+    <div>
+      <ExtraLargeTitle>Extra-large Title</ExtraLargeTitle>
+      <LargeTitle>Large Title</LargeTitle>
+      <Medium>Medium Title</Medium>
+      <Small>Small Title</Small>
+    </div>
+  </Story>
+</Preview>
