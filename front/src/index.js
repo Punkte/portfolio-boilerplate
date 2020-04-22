@@ -1,11 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import GlobalFont from './assets/fonts';
+import { Normalize } from 'styled-normalize'
 
 ReactDOM.render(
   <React.StrictMode>
+    <Normalize />
+    <GlobalFont />
     <App />
   </React.StrictMode>,
   document.getElementById('root')
