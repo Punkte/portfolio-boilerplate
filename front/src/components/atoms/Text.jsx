@@ -12,7 +12,7 @@ const sizes = {
 
 const StyledText = styled.span`
   font-size: ${props => sizes[props.size]};
-  font-family: 'Circe'
+  font-family: 'Circe', Arial, Helvetica, sans-serif;
 `
 
 const Text = ({children, ...props}) => <StyledText { ...props }>{ children }</StyledText>

@@ -1,6 +1,5 @@
 import { createGlobalStyle } from "styled-components"
 
-
 const GlobalFont = createGlobalStyle`
   @font-face {
     font-family: "Circe";
@@ -17,6 +16,11 @@ const GlobalFont = createGlobalStyle`
     font-family: "Circe Thin";
     src: url("//db.onlinewebfonts.com/t/444cd7814d5af34aae0b747096a69fed.eot");
     src: url("//db.onlinewebfonts.com/t/444cd7814d5af34aae0b747096a69fed.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/444cd7814d5af34aae0b747096a69fed.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/444cd7814d5af34aae0b747096a69fed.woff") format("woff"), url("//db.onlinewebfonts.com/t/444cd7814d5af34aae0b747096a69fed.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/444cd7814d5af34aae0b747096a69fed.svg#Circe Thin") format("svg");
+  }
+
+  @font-face {
+    font-family: 'Serial-Bold';
+    src: url('assets/fonts/columbia-serial-bold.ttf');
   }
 `
 
