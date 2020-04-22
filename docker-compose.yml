@@ -8,6 +8,8 @@ services:
     volumes: 
       - ./front:/app
       - /app/node_modules
+    networks:
+      - api_net
     ports:
       - "${REACT_APP_RUNNING_PORT}:3000"
     stdin_open: true # https://github.com/facebook/create-react-app/issues/8688
@@ -39,6 +41,7 @@ services:
       MONGO_INITDB_DATABASE: $DATABASE_NAME
       MONGODB_DATABASE: $DATABASE_NAME
     networks: 
+      - api_net
       - db_net
     ports:
       - "${DATABASE_RUNNING_PORT}:27017"
@@ -61,4 +64,5 @@ services:
     restart: always
 networks: 
   db_net:
+  api_net:
   
