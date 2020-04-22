@@ -1,13 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import colors from '../../assets/colors';
 
 const variants = {
   'navlink': {
-    border: "1px solid #DDD2CE",
+    border: `1px solid ${colors["pale-silver"]}`,
     padding: "42px 100px",
     fontSize: "16px",
-    background: "#FCF9F4",
+    background: colors["secondary"],
     boxSizing: "border-box",
     lineHeight: "0",
     "&:after": {
@@ -38,7 +39,7 @@ const StyledButton = styled.button`
   font-size: ${props => variants[props.variant].fontSize};
   line-height: ${props => variants[props.variant].lineHeight};
   background: ${props => variants[props.variant].background}; 
-  color: #40404C;
+  color: ${colors['light-black']};
   cursor: pointer;
   position: relative;
   transition: all 0.2s ease-in-out;
@@ -46,7 +47,7 @@ const StyledButton = styled.button`
     content: "";
     position: absolute;
     height: 2px;
-    background: #E10456;
+    background: ${colors["primary"]};
     width: 0;
     bottom: 0px;
     top: ${props => variants[props.variant]["&:after"].top};
@@ -54,7 +55,7 @@ const StyledButton = styled.button`
     transition: all 0.2s ease-in-out;
   }
   &:hover {
-    color: #E10456;
+    color: ${colors["primary"]};
   }
   &:hover:after {
     width: 30%; 
