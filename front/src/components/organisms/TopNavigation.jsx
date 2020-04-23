@@ -31,7 +31,7 @@ const StyledNavigationLogoButton = styled(StyledNavigationButton)`
 `
 
 const StyledNavigationVoidButton = styled(StyledNavigationButton)`
-  max-width: 515px;
+  max-width: 100%;
   padding: 0;
 
   cursor: default;
