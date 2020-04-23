@@ -1,5 +1,6 @@
 import React from 'react'
 import Title from '../atoms/Title'
+import PropTypes from 'prop-types';
 import Text from '../atoms/Text'
 import Button from '../molecules/Button'
 import styled from 'styled-components'
@@ -45,6 +46,16 @@ const ProjectDescription = ({ title, text, pageLink, picture }) => {
       </div>
     </StyledContainer>
   )
+}
+
+ProjectDescription.propTypes = {
+  title: PropTypes.string,
+  text: PropTypes.string,
+  pageLink: PropTypes.string,
+  picture: PropTypes.oneOfType([
+    PropTypes.element,
+    PropTypes.string
+  ])
 }
 
 export default ProjectDescription
