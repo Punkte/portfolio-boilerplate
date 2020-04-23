@@ -20,7 +20,7 @@ const GlobalFont = createGlobalStyle`
 
   @font-face {
     font-family: 'Serial-Bold';
-    src: url('assets/fonts/columbia-serial-bold.ttf');
+    src: url('https://lucid-perlman-1edc61.netlify.app/columbia-serial-bold.ttf');
   }
 `
 

@@ -1,27 +1,43 @@
 import { Meta, Story, Preview, Code, Props } from '@storybook/addon-docs/blocks';
 import {DefaultButton, NavlinkButton} from "./button.stories.js";
+import Button from '../../components/molecules/Button'
+import { Spacer } from '../utils'
 
 <Meta title="Molecules|Button" component={DefaultButton}/>
 
+# Button
+
+<Preview>
+  <DefaultButton/>
+  <NavlinkButton/>
+</Preview>
+
 ```javascript
-<Button 
-  variant={"default|navlink"}>
-    click me
+<Button variant={"default|navlink"}>
+  click me
 </Button>
 ```
 
-## default button
+## Default button
 
-<Story name="Default Button">
-  <DefaultButton/>
-</Story>
+<Preview>
+  <Story name="Default Button">
+    <Button variant={"default"}>
+      click me
+    </Button>
+  </Story>
+</Preview>
 
-## navbar button
+## Navbar button
 
-<Story name="Navlink Button">
-  <NavlinkButton/>
-</Story>
+<Preview>
+  <Story name="Navlink Button">
+    <Button variant={"navlink"}>
+      click me
+    </Button>
+  </Story>
+</Preview>
 
 # Props
 
-<Props of={DefaultButton}/>
+<Props of={Button}/>

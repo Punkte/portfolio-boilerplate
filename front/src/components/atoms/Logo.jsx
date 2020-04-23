@@ -1,3 +1,2 @@
-import {ReactComponent as ReactLogo} from '../../assets/img/logo.svg';
-
-export default ReactLogo
+import { ReactComponent as Logo } from '../../assets/img/logo.svg';
+export default Logo

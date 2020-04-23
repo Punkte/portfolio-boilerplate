@@ -16,6 +16,22 @@ const StyledTitle = styled.span`
   font-size: ${props => titleTypes[props.size].size};
   color: ${props => titleTypes[props.size].color};
   font-family: 'Serial-Bold', Arial, Helvetica, sans-serif;
+  ${props => {
+    if(props.size === 'extra-large') {
+      return /* css */ `
+        position: relative;
+        padding-left: 32px;
+        &:before {
+          content: '';
+          position: absolute;
+          left: 2px; bottom: 14px;
+          width: 27px;
+          height: 3px;
+          background: ${colors.primary}
+        }
+      `/* css */
+    }
+  }}
 `
 
 const Title = ({children, ...props}) => <StyledTitle { ...props }>{ children }</StyledTitle>
@@ -32,7 +48,8 @@ Title.propTypes = {
     'medium',
     'small',
   ]),
-  children: PropTypes.element.isRequired
+  children: PropTypes.element,
+  withBar: PropTypes.bool
 };
 
 export default Title

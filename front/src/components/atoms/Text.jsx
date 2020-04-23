@@ -30,7 +30,7 @@ Text.propTypes = {
     'small',
     'extra-small'
   ]),
-  children: PropTypes.element.isRequired
+  children: PropTypes.oneOfType([PropTypes.element, PropTypes.string])
 };
 
 export default Text

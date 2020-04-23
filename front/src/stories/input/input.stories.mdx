@@ -1,25 +1,29 @@
 import { Meta, Story, Preview, Code, Props } from '@storybook/addon-docs/blocks';
 import { Input } from './input.stories';
+import { Spacer } from '../utils'
 // import Button from '../../components/atoms/button';
 
 <Meta title="Atoms|Input" component={Input} />
 
 # Input
 
-<div style={{ display: 'flex', flexDirection: 'column', marginTop: '32px' }}>
-  <Input placeholder="Name"/>
-</div>
-
-Now let's see in details !
+<Spacer size="32px" />
+<Input placeholder="The placeholder"/>
 
 ```javascript
-  <Input placeholder="Name"/>
+  <Input placeholder="The placeholder"/>
 ```
 
-# Story Component
+# Preview
 <Preview>
   <Story name="Input preview">
     <Input placeholder="Name"/>
+  </Story>
+</Preview>
+
+<Preview>
+  <Story name="Texarea preview">
+    <Input placeholder="Rediger" as="textarea"/>
   </Story>
 </Preview>
 
