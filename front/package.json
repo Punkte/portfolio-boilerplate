@@ -19,7 +19,8 @@
     "test": "react-scripts test",
     "test:nowatch": "CI=true react-scripts test --env=jsdom --coverage",
     "eject": "react-scripts eject",
-    "storybook": "start-storybook -p 9009 -s public watch-css -s ./src"
+    "storybook": "start-storybook -p 9009 -s public watch-css -s ./src",
+    "build-storybook": "build-storybook -c .storybook -o .out"
   },
   "eslintConfig": {
     "extends": "react-app"
