@@ -10,16 +10,23 @@ const sizes = {
   'extra-small': `${16}px` ,
 }
 
+const weights = {
+  'light': 'Circe Thin',
+  'regular': 'Circe',
+  'bold': 'Circe Bold',
+}
+
 const StyledText = styled.span`
   font-size: ${props => sizes[props.size]};
-  font-family: 'Circe', Arial, Helvetica, sans-serif;
+  font-family: ${props => weights[props.weight]}, Arial, Helvetica, sans-serif;
 `
 
 const Text = ({children, ...props}) => <StyledText { ...props }>{ children }</StyledText>
 
 Text.displayName = 'Text'
 Text.defaultProps = {
-  size: 'medium'
+  size: 'medium',
+  weight: 'regular',
 };
 
 Text.propTypes = {
@@ -29,6 +36,11 @@ Text.propTypes = {
     'medium',
     'small',
     'extra-small'
+  ]),
+  weight: PropTypes.oneOf([
+    'light',
+    'regular',
+    'bold',
   ]),
   children: PropTypes.oneOfType([PropTypes.element, PropTypes.string])
 };
