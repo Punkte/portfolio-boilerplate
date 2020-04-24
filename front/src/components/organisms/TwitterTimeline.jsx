@@ -20,7 +20,7 @@ const TwitterTimeline = ({title, name}) => {
   return(
     <StyledTimelineContainer>
       <Title size="small">
-        {title}
+        { title }
       </Title>
       <StyledTimeline>
         <TwitterTimelineEmbed
