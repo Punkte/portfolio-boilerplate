@@ -1,0 +1,37 @@
+import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
+import { SNCFProjectDescription, FormulaProjectDescription } from "./project-description.stories.js";
+import ProjectDescription from '../../components/organisms/ProjectDescription'
+import { Spacer } from '../utils'
+
+<Meta title="Organisms|ProjectDescription" component={ProjectDescription}/>
+
+# ProjectDescription
+
+<Spacer size="32px" />
+<SNCFProjectDescription/>
+
+
+```javascript
+<ProjectDescription
+  title="SNCF Inoui"
+  text=" Web-app responsive et social game permettant aux agents de se former sur l’ensemble des applications client SNCF"
+  pageLink="#"
+  picture={ProjectPicture}
+/>
+```
+
+# Preview
+
+<Preview>
+  <Story name="Formula 1 Project">
+    <FormulaProjectDescription/>
+  </Story>
+</Preview>
+
+<Story name="SNCF Project">
+  <SNCFProjectDescription/>
+</Story>
+
+# Props
+
+<Props of={ProjectDescription}/>

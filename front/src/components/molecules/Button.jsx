@@ -6,7 +6,8 @@ import colors from '../../assets/colors';
 const variants = {
   'navlink': {
     border: `1px solid ${colors["pale-silver"]}`,
-    padding: "42px 100px",
+    padding: "16px",
+    maxWidth: "200px",
     fontSize: "16px",
     background: colors["secondary"],
     boxSizing: "border-box",

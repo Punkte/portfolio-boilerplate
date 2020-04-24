@@ -5,6 +5,11 @@
 * [Yash PATEL](https://github.com/ya-sh)
 * [Paartheepan RAVEENTHIRAN](https://github.com/punkte)
 
+# Links
+
+* [Figma](https://www.figma.com/file/3OwxUpBqBda8l5SHpjMtzr/Epic-Classroom?node-id=0%3A1)
+* [Storybook](https://storybook-christella.now.sh/)
+
 # How to install
 
 #### Requirements
