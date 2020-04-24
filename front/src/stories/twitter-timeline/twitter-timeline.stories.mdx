@@ -1,0 +1,29 @@
+import { Meta, Story, Preview, Code, Props } from '@storybook/addon-docs/blocks';
+import { Timeline } from './twitter-timeline.stories.js';
+import TwitterTimeline from '../../components/organisms/TwitterTimeline';
+import { Spacer } from '../utils'
+
+<Meta title="Organisms|Timeline" component={Timeline} />
+
+# Timeline
+
+<Spacer size="32px" />
+<Timeline />
+
+
+```javascript
+<Timeline />
+```
+
+# Preview
+
+<Preview>
+  <Story name="Desktop">
+    <Timeline />
+  </Story>
+</Preview>
+
+
+# Props
+
+<Props of={TwitterTimeline}/>
