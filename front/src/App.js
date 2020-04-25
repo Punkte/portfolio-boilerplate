@@ -1,22 +1,34 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
+import TopNavigation from './components/organisms/TopNavigation';
+import ProjectDescription from './components/organisms/ProjectDescription.jsx'
 
 function App() {
+  const [works, setWorks] = useState(null);
+
+  
+
+  useEffect(() => {
+    (async () => {
+      const req = await fetch('http://punkte.fr:1337/works')
+      const res = await req.json()
+      setWorks(res)
+    })()
+  }, [])
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.jss</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <TopNavigation/>
+      <div className="app">
+        {works && works.map(w => (
+          <ProjectDescription
+            key={w.id}
+            title={w.title}
+            text={w.description}
+            picture={"http://punkte.fr:1337" + w.cover.url}
+          />
+        ))}
+      </div>
+    </Router>
   );
 }
 

@@ -9,7 +9,6 @@ const variants = {
     padding: "16px",
     maxWidth: "200px",
     fontSize: "16px",
-    background: colors["secondary"],
     boxSizing: "border-box",
     lineHeight: "0",
     "&:after": {
