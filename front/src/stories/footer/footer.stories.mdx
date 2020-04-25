@@ -1,0 +1,44 @@
+import { Meta, Story, Preview, Code, Props } from '@storybook/addon-docs/blocks';
+import Footer from '../../components/organisms/Footer';
+import { Spacer } from '../utils'
+
+<Meta title="Organisms|Footer" component={Footer} />
+
+# Footer
+
+<Spacer size="32px" />
+<Footer 
+    email="christella.levieux@icloud.com" 
+    phone="+33 6 98 92 84 01"
+    links={[
+        {label: "Linkedin", href: "https://www.linkedin.com/in/christella-levieux/"},
+        {label: "Twitter", href: "https://twitter.com/christella_kl"},
+    ]}
+/>
+
+
+```javascript
+<Footer 
+    email="christella.levieux@icloud.com" 
+    phone="+33 6 98 92 84 01"
+    links={[
+        {label: "Linkedin", href: "https://www.linkedin.com/in/christella-levieux/"},
+        {label: "Twitter", href: "https://twitter.com/christella_kl"},
+    ]}
+/>
+```
+
+# Preview
+
+<Preview>
+  <Story name="Desktop">
+    <Footer 
+        email="christella.levieux@icloud.com" 
+        phone="+33 6 98 92 84 01"
+        links={[
+            {label: "Linkedin", href: "https://www.linkedin.com/in/christella-levieux/"},
+            {label: "Twitter", href: "https://twitter.com/christella_kl"},
+        ]}
+    />
+  </Story>
+</Preview>
