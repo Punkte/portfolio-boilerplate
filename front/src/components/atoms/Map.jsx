@@ -15,7 +15,6 @@ const Map = ({lngLat}) => {
   const mapContainer = useRef(null);
 
   useEffect(() => {
-    console.log([...lngLat])
     mapboxgl.accessToken = process.env.REACT_APP_MAPBOX || process.env.STORYBOOK_MAPBOX;
     const initializeMap = ({ setMap, mapContainer }) => {
       const map = new Mapbox({
