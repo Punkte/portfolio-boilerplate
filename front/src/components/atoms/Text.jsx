@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
-const sizes = {
+export const sizes = {
   'extra-large': `${38}px` ,
   'large': `${22}px` ,
   'medium': `${20}px` ,
@@ -10,7 +10,7 @@ const sizes = {
   'extra-small': `${16}px` ,
 }
 
-const weights = {
+export const weights = {
   'light': 'Circe Thin',
   'regular': 'Circe',
   'bold': 'Circe Bold',
@@ -42,7 +42,7 @@ Text.propTypes = {
     'regular',
     'bold',
   ]),
-  children: PropTypes.oneOfType([PropTypes.element, PropTypes.string, PropTypes.number]),
+  children: PropTypes.oneOfType([PropTypes.element, PropTypes.string, PropTypes.number, PropTypes.any]),
 };
 
 export default Text
