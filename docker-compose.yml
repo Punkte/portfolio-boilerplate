@@ -5,6 +5,8 @@ services:
     build: 
       context: ./front
       dockerfile: Dockerfile.dev
+    environment:
+      REACT_APP_MAPBOX: $REACT_APP_MAPBOX
     volumes: 
       - ./front:/app
       - /app/node_modules
@@ -13,55 +15,41 @@ services:
     ports:
       - "${REACT_APP_RUNNING_PORT}:3000"
     stdin_open: true # https://github.com/facebook/create-react-app/issues/8688
-  strapi:
-    image: strapi/strapi
-    container_name: strapi
-    depends_on:
-      - p-mongo 
-    environment: 
-      DATABASE_CLIENT: mongo
-      DATABASE_HOST: p-mongo
-      DATABASE_PORT: $DATABASE_RUNNING_PORT
-      DATABASE_NAME: $DATABASE_NAME
-      DATABASE_USERNAME: $DATABASE_USERNAME
-      DATABASE_PASSWORD: $DATABASE_PASSWORD
-      DATABASE_AUTHENTICATION_DATABASE: $DATABASE_NAME
-    networks: 
-      - db_net
-    ports:
-      - "$STRAPI_RUNNING_PORT:1337"
-    volumes:
-      - ./strapi:/srv/app
-  p-mongo:
-    image: mongo
-    container_name: mongodb
-    environment: 
-      MONGO_INITDB_ROOT_USERNAME: $DATABASE_USERNAME
-      MONGO_INITDB_ROOT_PASSWORD: $DATABASE_PASSWORD
-      MONGO_INITDB_DATABASE: $DATABASE_NAME
-      MONGODB_DATABASE: $DATABASE_NAME
-    networks: 
-      - api_net
-      - db_net
-    ports:
-      - "${DATABASE_RUNNING_PORT}:27017"
-    restart: always
-    volumes:
-      - ./db:/data/db
-  p-mongo-express:
-    image: mongo-express
-    container_name: mongo-express
-    depends_on: 
-      - p-mongo
-    environment: 
-      ME_CONFIG_MONGODB_SERVER: p-mongo
-      ME_CONFIG_MONGODB_ADMINUSERNAME: $DATABASE_USERNAME
-      ME_CONFIG_MONGODB_ADMINPASSWORD: $DATABASE_PASSWORD
-    networks: 
-      - db_net
-    ports: 
-      - "${ME_RUNNING_PORT}:8081"
-    restart: always
+  # strapi:
+  #   image: strapi/strapi
+  #   container_name: strapi
+  #   depends_on:
+  #     - p-mongo 
+  #   environment: 
+  #     DATABASE_CLIENT: mongo
+  #     DATABASE_HOST: p-mongo
+  #     DATABASE_PORT: $DATABASE_RUNNING_PORT
+  #     DATABASE_NAME: $DATABASE_NAME
+  #     DATABASE_USERNAME: $DATABASE_USERNAME
+  #     DATABASE_PASSWORD: $DATABASE_PASSWORD
+  #     DATABASE_AUTHENTICATION_DATABASE: $DATABASE_NAME
+  #   networks: 
+  #     - db_net
+  #   ports:
+  #     - "$STRAPI_RUNNING_PORT:1337"
+  #   volumes:
+  #     - ./strapi:/srv/app
+  # p-mongo:
+    # image: mongo
+    # container_name: mongodb
+    # environment: 
+    #   MONGO_INITDB_ROOT_USERNAME: $DATABASE_USERNAME
+    #   MONGO_INITDB_ROOT_PASSWORD: $DATABASE_PASSWORD
+    #   MONGO_INITDB_DATABASE: $DATABASE_NAME
+    #   MONGODB_DATABASE: $DATABASE_NAME
+    # networks: 
+    #   - api_net
+    #   - db_net
+    # ports:
+    #   - "${DATABASE_RUNNING_PORT}:27017"
+    # restart: always
+    # volumes:
+    #   - ./db:/data/db
 networks: 
   db_net:
   api_net:
