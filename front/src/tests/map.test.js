@@ -8,7 +8,7 @@ import '@testing-library/jest-dom/extend-expect';
 jest.mock("mapbox-gl", () => require("mapbox-gl-js-mock"));
 xdescribe('Renders Map component', () => {
     xtest('with default', () => {
-        const { container } = render(<Map />);
+        const { container } = render(<div />);
         expect(container).toBeTruthy();
     });
 });
