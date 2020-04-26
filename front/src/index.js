@@ -5,7 +5,7 @@ import * as serviceWorker from './serviceWorker';
 import GlobalFont from './assets/fonts';
 import { Normalize } from 'styled-normalize'
 
-const render = Component => {
+const render = () => {
   return ReactDOM.render(
     <React.StrictMode>
       <Normalize />
