@@ -2,7 +2,7 @@ import React from 'react'
 import ReactMarkdown from 'react-markdown'
 import Text from '../atoms/Text'
 import Title from '../atoms/Title'
-
+import PropTypes from 'prop-types'
 
 const Caption = ({ text }) => {
   return (
@@ -14,6 +14,10 @@ const Caption = ({ text }) => {
       }}
     />
   )
+}
+
+Caption.propTypes = {
+  text: PropTypes.string
 }
 
 export default Caption
