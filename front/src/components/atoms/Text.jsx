@@ -42,7 +42,7 @@ Text.propTypes = {
     'regular',
     'bold',
   ]),
-  children: PropTypes.oneOfType([PropTypes.element, PropTypes.string])
+  children: PropTypes.oneOfType([PropTypes.element, PropTypes.string, PropTypes.number]),
 };
 
 export default Text
