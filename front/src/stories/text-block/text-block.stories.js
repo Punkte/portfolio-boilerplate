@@ -1,5 +1,5 @@
 import React from 'react'
-import TextBlock from '../../components/organisms/TextBlock.jsx'
+import TextBlock from '../../components/molecules/TextBlock.jsx'
 
 export const Titles = () => {
   const titles = [
