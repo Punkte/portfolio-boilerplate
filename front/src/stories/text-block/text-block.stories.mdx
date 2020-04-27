@@ -1,0 +1,53 @@
+import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
+import { Titles } from "./text-block.stories.js";
+import TextBlock from '../../components/organisms/TextBlock'
+import { Spacer } from '../utils'
+
+<Meta title="Organisms|TextBlock" component={TextBlock}/>
+
+# TextBlock
+
+<Spacer size="32px" />
+<TextBlock
+  text="Web-app responsive et social game permettant aux **agents** de se former sur l’ensemble des applications client SNCF"
+/>
+
+```javascript
+<TextBlock
+  text="Web-app responsive et social game permettant aux **agents** de se former sur l’ensemble des applications client SNCF"
+/>
+```
+
+# Preview
+
+<Preview>
+  <Story name="Headings in markdown">
+    <TextBlock 
+      text={`
+# Heading title  \n
+## Heading title  \n
+### Heading title  \n
+#### Heading title  \n
+##### Heading title  \n
+###### Heading title`}
+    />
+  </Story>
+</Preview>
+
+<Preview>
+  <Story name="TextBlock in markdown">
+    <TextBlock 
+      text={`
+# À propos  
+## Expériences  
+J'ai pour ambition de concevoir des solutions adaptées à vos utilisateurs et utilisatrices afin de valoriser leur experience dans l’utilisation de votre produit ou de votre service.  
+  
+Je cherche une alternance à partir de septembre 2020.`
+}
+    />
+  </Story>
+</Preview>
+
+# Props
+
+<Props of={TextBlock}/>

@@ -48,7 +48,7 @@ Title.propTypes = {
     'medium',
     'small',
   ]),
-  children: PropTypes.element,
+  children: PropTypes.oneOfType([PropTypes.element, PropTypes.string, PropTypes.number, PropTypes.any]),
   withBar: PropTypes.bool
 };
 
