@@ -75,6 +75,7 @@ const ContactForm = ({title}) => {
             placeholder="Votre message" 
             value={inputs.message}
             onChange={e => handleChange({name: "message", value: e.target.value})}
+            as="textarea"
           />
         </StyledMessageContainer>
       </StyledFormContainer>
@@ -92,5 +93,4 @@ ContactForm.propTypes = {
 }
 
 export default ContactForm;
-
 
