@@ -6,6 +6,7 @@ function useForm(initial) {
   
   const handleChange = ({name, value}) => {
     // on met à jour tout le formulaire avec la nouvelle valeur du champ à modifier 
+    console.log({name, value})
     setInputs({ ...inputs, [name]: value });
   };
 
