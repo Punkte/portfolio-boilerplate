@@ -5,15 +5,16 @@ import * as serviceWorker from './serviceWorker';
 import GlobalFont from './assets/fonts';
 import { Normalize } from 'styled-normalize'
 import GlobalReset from './assets/css/reset';
+import { BrowserRouter as Router } from 'react-router-dom';
 
 const render = () => {
   return ReactDOM.render(
-    <React.StrictMode>
+    <Router>
       <GlobalReset />
       <Normalize />
       <GlobalFont />
       <App />
-    </React.StrictMode>,
+    </Router>,
     document.getElementById('root')
   )
 }

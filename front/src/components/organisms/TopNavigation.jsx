@@ -1,5 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import Logo from '../atoms/Logo'
 import styled from 'styled-components'
 import NavLink from '../molecules/NavLink'
@@ -37,21 +36,17 @@ const StyledNavigationVoidButton = styled(NavLink)`
 `
 
 
-const TopNavigation = (props) => {
+const TopNavigation = ({ homeClick, aboutClick, contactClick }) => {
   return (
     <StyledTopNavigationContainer>
-      <StyledNavigationLogoButton variant="navlink" after={false}>
+      <StyledNavigationLogoButton variant="navlink" after={false} onClick={homeClick}>
         <Logo />
       </StyledNavigationLogoButton>
       <StyledNavigationVoidButton variant="navlink" />
-      <StyledNavLink>À propos</StyledNavLink>
-      <StyledNavLink>Contact</StyledNavLink>
+      <StyledNavLink onClick={aboutClick}>À propos</StyledNavLink>
+      <StyledNavLink onClick={contactClick}>Contact</StyledNavLink>
     </StyledTopNavigationContainer>
   )
-}
-
-TopNavigation.propTypes = {
-
 }
 
 export default TopNavigation
