@@ -4,10 +4,12 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import GlobalFont from './assets/fonts';
 import { Normalize } from 'styled-normalize'
+import GlobalReset from './assets/css/reset';
 
 const render = () => {
   return ReactDOM.render(
     <React.StrictMode>
+      <GlobalReset />
       <Normalize />
       <GlobalFont />
       <App />

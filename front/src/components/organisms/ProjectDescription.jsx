@@ -29,6 +29,12 @@ const StyledHeader = styled.div`
   }
 `
 
+const StyledPictureContainer = styled.div`
+  img {
+    width: 100%;
+  }
+`
+
 const ProjectDescription = ({ title, text, pageLink, picture }) => {
   return (
     <StyledContainer>
@@ -41,9 +47,9 @@ const ProjectDescription = ({ title, text, pageLink, picture }) => {
           <StyledButton link={pageLink}>Voir le projet</StyledButton>
         </div>
       </StyledHeader>
-      <div className="picture-container">
+      <StyledPictureContainer>
         <img src={picture} alt={title} />
-      </div>
+      </StyledPictureContainer>
     </StyledContainer>
   )
 }
