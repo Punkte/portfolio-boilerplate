@@ -1,4 +1,4 @@
-export const BASE_URI = 'http://punkte.fr:1337'
+export const BASE_URI = 'https://punkte.fr'
 
 export const getCaption = '/caption'
 export const getWorks = '/works'
