@@ -2,8 +2,10 @@ import React from 'react'
 import Caption from '../molecules/Caption'
 import styled from 'styled-components'
 import colors from '../../assets/colors'
+import Text from '../atoms/Text'
 
 const StyledCaption = styled(Caption)``
+const StyledText = styled(Text)
 
 const StyledContainer = styled.div`
   height: calc(100vh - 100px); /* header height */
@@ -14,10 +16,10 @@ const StyledContainer = styled.div`
 
   border-bottom: solid ${colors["ligh-grey"]} 1px;
 
-  .caption {
+  ${StyledCaption} {
     max-width: 800px;
 
-    & > div + div {
+    & ${StyledText}:not(:first-child) {
       margin-top: 32px;
     }
   }

@@ -5,14 +5,14 @@ import Title from '../atoms/Title'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
-const Caption = ({ text }) => {
+const Caption = ({ text, ...props }) => {
   return (
-    <div className="caption">
+    <div {...props}>
       <ReactMarkdown
         source={text}
         renderers={{
-          paragraph: ({children}) => <Text size="extra-large" weight="light" as={'div'}>{children}</Text>,
-          strong: ({children}) => <Title size="medium" style={{display: 'inline'}} as={'strong'}>{children}</Title>,
+          paragraph: ({children, ...props}) => <Text size="extra-large" weight="light" as={'div'} {...props}>{children}</Text>,
+          strong: ({children, ...props}) => <Title size="medium" style={{display: 'inline'}} as={'strong'} {...props}>{children}</Title>,
         }}
       />
     </div>
