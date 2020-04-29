@@ -5,14 +5,26 @@ import '@testing-library/jest-dom/extend-expect';
 
 import { DefaultButton, NavlinkButton } from '../stories/button/button.stories';
 
-describe('Renders Label component', () => {
+describe('Renders Button component', () => {
+    let spy;
+
+    beforeEach(() => {
+      spy = jest.fn();
+    });
+
     test('with default behavior', () => {
-        const { container } = render(<DefaultButton />);
+        const { container, getByTestId } = render(<DefaultButton onClick={spy} />);
         expect(container).toBeTruthy();
+        const button = getByTestId('default-button')
+        button.click()
+        expect(spy).toHaveBeenCalled()
     });
 
     test('with navLink variant', () => {
-        const { container } = render(<NavlinkButton />);
+        const { container, getByTestId } = render(<NavlinkButton onClick={spy} />);
         expect(container).toBeTruthy();
+        const button = getByTestId('navlink-button')
+        button.click()
+        expect(spy).toHaveBeenCalled()
     });
 });
