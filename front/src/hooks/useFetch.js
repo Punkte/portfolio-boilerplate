@@ -23,7 +23,7 @@ const useFetch = (endpoint, options) => {
         setLoading(false)
       }
     })()
-  }, [])
+  }, [endpoint, options])
   return [loading, error, response]
 }
 

@@ -1,18 +1,24 @@
-import React, { useEffect, useState } from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import React from 'react';
+import {  Switch, Route, useHistory } from 'react-router-dom';
 import Home from './pages/Home';
 import TopNavigation from './components/organisms/TopNavigation'
 import Footer from './components/organisms/Footer'
+import Contact from './pages/Contact';
 
 function App() {
+  let history = useHistory()
+  const goTo = path => history.push(path)
   return (
     <>
-    <TopNavigation />
-    <Router>
+    <TopNavigation
+      homeClick={() => goTo('/')}
+      contactClick={() => goTo('/contact')}
+      aboutClick={() => goTo('/about')}
+    />
       <Switch>
         <Route exact path="/" component={Home} />
+        <Route path="/contact" component={Contact} />
       </Switch>
-    </Router>
     <Footer
       email="christella.levieux@icloud.com" 
       phone="+33 6 98 92 84 01"

@@ -22,7 +22,7 @@ const paragraphRenderer = ({ children }) => <Text as="p" weight="light">{childre
 
 const strongRenderer = ({ children }) => <Text weight="bold">{children}</Text>
 
-const TextBlock = ({ text, ...props }) => {
+const TextBlock = ({ text, renderers, ...props }) => {
   return (
     <ReactMarkdown
       { ...props }
@@ -30,7 +30,8 @@ const TextBlock = ({ text, ...props }) => {
       renderers={{
         heading: headingRenderer,
         paragraph: paragraphRenderer,
-        strong: strongRenderer
+        strong: strongRenderer,
+        ...renderers,
       }}
     />
   )
