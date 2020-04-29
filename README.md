@@ -7,8 +7,9 @@
 
 # Links
 
-* [Figma](https://www.figma.com/file/3OwxUpBqBda8l5SHpjMtzr/Epic-Classroom?node-id=0%3A1)
+* [App](https://christella.netlify.app/)
 * [Storybook](https://storybook-christella.now.sh/)
+* [Figma](https://www.figma.com/file/3OwxUpBqBda8l5SHpjMtzr/Epic-Classroom?node-id=0%3A1)
 
 # How to install
 
@@ -27,5 +28,19 @@ $ docker-compose build
 Launch containers  
 ```bash
 $ docker-compose up # -d
+```
+
+#### Launch Storybook
+Go to the front directory  
+Create a `.env` file and copy the content of the [.env.example](./front/.env.example) file.  
+
+Install dependancies 
+```bash
+$ yarn 
+```
+
+Launch storybook
+```bash
+$ yarn storybook
 ```
 
