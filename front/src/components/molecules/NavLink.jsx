@@ -8,14 +8,14 @@ const StyledNavigationButton = styled(Button)`
   flex-grow: 1;
   line-height: 1;
   border-left: none;
-`
+`;
 
 const NavLink = ({children, ...props}) => {
   return (
     <StyledNavigationButton variant="navlink" { ...props }>
       <Text size="extra-small">{children}</Text>
     </StyledNavigationButton>
-  )
+  );
 }
 
-export default NavLink
+export default NavLink;
