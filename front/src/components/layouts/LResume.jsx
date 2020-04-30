@@ -37,7 +37,7 @@ const LResume = ({text, experience, education,  ...props}) => {
 							<ExperienceContainer>
 								<Experience 
 									key={index}
-									inProgress={xp.inProgress}
+									showMonths
 									label={xp.label} 
 									start={xp.start} 
 									end={xp.end} 
@@ -57,7 +57,6 @@ const LResume = ({text, experience, education,  ...props}) => {
 							<ExperienceContainer>
 								<Experience 
 									key={index}
-									inProgress={xp.inProgress}
 									label={xp.label} 
 									start={xp.start} 
 									end={xp.end} 

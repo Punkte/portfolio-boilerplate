@@ -1,0 +1,45 @@
+import { Meta, Story, Preview, Code, Props } from '@storybook/addon-docs/blocks';
+import {Experience} from "./experience.stories.js";
+import { Spacer } from '../utils'
+
+<Meta title="Molecules|Experience" component={Experience}/>
+
+# Experience
+
+<Preview>
+  <Experience 
+    label="UX/UI designer"
+    showMonths={false}
+    start="2018-09-30"
+    end="2019-07-31" 
+    at="SensioGrey(WWP)"
+    city="paris" />
+</Preview>
+
+```javascript
+<Experience 
+    label="UX/UI designer"
+    showMonths={false}
+    start="2018-09-30"
+    end="2019-07-31" 
+    at="SensioGrey(WWP)"
+    city="paris" />
+```
+
+## ContactForm
+
+<Preview>
+  <Story name="Experience">
+    <Experience 
+    label="UX/UI designer"
+    showMonths={false}
+    start="2018-09-30"
+    end="2019-07-31" 
+    at="SensioGrey(WWP)"
+    city="paris" />
+  </Story>
+</Preview>
+
+# Props
+
+<Props of={Experience}/>
