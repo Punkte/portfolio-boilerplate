@@ -4,6 +4,7 @@ import Home from './pages/Home';
 import TopNavigation from './components/organisms/TopNavigation'
 import Footer from './components/organisms/Footer'
 import Contact from './pages/Contact';
+import About from './pages/About';
 
 function App() {
   let history = useHistory()
@@ -29,6 +30,7 @@ function App() {
     />
       <Switch>
         <Route exact path="/" component={Home} />
+        <Route path="/about" component={About} />
         <Route path="/contact" component={Contact} />
       </Switch>
     <Footer

@@ -13,12 +13,9 @@ const StyledContainer = styled.div`
   flex-direction: column;
   justify-content: flex-end;
   padding: 0 64px 82px;
-
   border-bottom: solid ${colors["ligh-grey"]} 1px;
-
   ${StyledCaption} {
     max-width: 800px;
-
     & ${StyledText}:not(:first-child) {
       margin-top: 32px;
     }
