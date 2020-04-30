@@ -1,5 +1,5 @@
 import { Meta, Story, Preview, Code, Props } from '@storybook/addon-docs/blocks';
-import {Story} from "./story.stories.js";
+import {Story as StoryComp} from "./story.stories.js";
 import { Spacer } from '../utils'
 
 <Meta title="Molecules|Story" component={Story}/>
@@ -7,7 +7,7 @@ import { Spacer } from '../utils'
 # Story
 
 <Preview>
-  <Story text="J’ai travaillé deux ans en agence digital, où j’ai pu analyser les problèmatiques de différents clients, startups et grands groupes sur des projets divers tel que des applications, des sites web et des produits."/>
+  <StoryComp text="J’ai travaillé deux ans en agence digital, où j’ai pu analyser les problèmatiques de différents clients, startups et grands groupes sur des projets divers tel que des applications, des sites web et des produits."/>
 </Preview>
 
 ```javascript
@@ -18,10 +18,10 @@ import { Spacer } from '../utils'
 
 <Preview>
   <Story name="ContactForm">
-      <Story text="J’ai travaillé deux ans en agence digital, où j’ai pu analyser les problèmatiques de différents clients, startups et grands groupes sur des projets divers tel que des applications, des sites web et des produits."/>
+      <StoryComp text="J’ai travaillé deux ans en agence digital, où j’ai pu analyser les problèmatiques de différents clients, startups et grands groupes sur des projets divers tel que des applications, des sites web et des produits."/>
   </Story>
 </Preview>
 
 # Props
 
-<Props of={Story}/>
+<Props of={StoryComp}/>
