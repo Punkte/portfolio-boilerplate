@@ -7,8 +7,7 @@ Scenario: User sending email
   When I type "elon.musk@tesla.com" as email
   Then submit button should still be disabled
   When I click on submit button
-  Then the message is not sent
+  And I type "want to work with u" as subject
+  Then submit button should still be disabled
   When I type "hi, how are you ?" as message
   Then submit button should'nt be disabled
-  When I click on submit button
-  

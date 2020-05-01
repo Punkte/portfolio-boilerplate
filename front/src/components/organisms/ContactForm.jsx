@@ -96,6 +96,7 @@ ContactForm.displayName = "ContactForm";
 
 ContactForm.propTypes = {
   title: PropTypes.string,
+  onSubmit: PropTypes.func
 }
 
 export default ContactForm;
