@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Text from '../atoms/Text';
-import moment from "moment";
+import moment from "moment/min/moment-with-locales";
 import colors from '../../assets/colors';
 import PropTypes from 'prop-types';
 
