@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import Title from '../atoms/Title';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
@@ -33,14 +33,15 @@ const defaultValues = {
   message: "",
 }
 
-const ContactForm = ({title}) => {
+const ContactForm = ({title, onSubmit}) => {
   const {inputs, handleChange, resetForm} = useForm(defaultValues);
-
-  const _onSubmit = () => {
-    let formData = JSON.stringify(inputs);
-    alert(formData);
-  }
-
+  const { name, subject, email, message } = inputs 
+  const [validForm, setValidForm] = useState(false)
+  useEffect(() => {
+    if(!!name && !!subject && !!email && !!message) {
+      setValidForm(true)
+    }
+  }, [name, subject, email, message])
   return (
     <StyledContainer>
       <Title size="small">{title}</Title>
@@ -50,24 +51,28 @@ const ContactForm = ({title}) => {
           placeholder="Votre nom" 
           value={inputs.name}
           onChange={e => handleChange({name: "name", value: e.target.value})}
+          data-testid="name"
         /> 
         <Field 
           label="Sujet" 
           placeholder="Votre sujet" 
           value={inputs.subject}
           onChange={e => handleChange({name: "subject", value: e.target.value})}
+          data-testid="subject"
         />
         <Field 
           label="Entreprise" 
           placeholder="Votre entreprise" 
           value={inputs.company}
           onChange={e => handleChange({name: "company", value: e.target.value})}
+          data-testid="company"
         />
         <Field 
           label="Email" 
           placeholder="Votre email" 
           value={inputs.email}
           onChange={e => handleChange({name: "email", value: e.target.value})}
+          data-testid="email"
         />
         <StyledMessageContainer>
           <Field 
@@ -76,11 +81,12 @@ const ContactForm = ({title}) => {
             value={inputs.message}
             onChange={e => handleChange({name: "message", value: e.target.value})}
             as="textarea"
+            data-testid="message"
           />
         </StyledMessageContainer>
       </StyledFormContainer>
       <StyledButtonContainer>
-        <Button onClick={_onSubmit}>Valider</Button>
+        <Button onClick={onSubmit} disabled={!validForm} data-testid="button">Valider</Button>
       </StyledButtonContainer>
     </StyledContainer>
   )

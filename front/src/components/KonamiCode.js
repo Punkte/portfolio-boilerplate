@@ -1,5 +1,3 @@
-import React from 'react'
-
 const KonamiCode = () => {
   const imgs = [
     {src: 'https://scontent-atl3-1.cdninstagram.com/v/t51.2885-19/66618377_2474326249256677_6661246847325044736_n.jpg?_nc_ht=scontent-atl3-1.cdninstagram.com&_nc_ohc=PY5U49rJPukAX_7GidA&oh=cc15060f8c3323049d9300cf070bb0eb&oe=5ED3AF6F', name: 'Christella LEVIEUX'},

@@ -3,7 +3,6 @@ import ReactMarkdown from 'react-markdown'
 import Text from '../atoms/Text'
 import Title from '../atoms/Title'
 import PropTypes from 'prop-types'
-import styled from 'styled-components'
 
 const renderers = {
   paragraph: ({children, ...props}) => <Text size="extra-large" weight="light" as={'div'} {...props}>{children}</Text>,
