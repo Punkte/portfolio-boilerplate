@@ -6,6 +6,5 @@ module.exports = async ({ config }) => {
     use: ['resolve-url-loader'],
     include: path.resolve(__dirname, '../')
   });
-  config.plugins.push(new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),)
   return config;
 };
