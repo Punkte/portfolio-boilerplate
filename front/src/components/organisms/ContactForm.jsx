@@ -40,6 +40,8 @@ const ContactForm = ({title, onSubmit}) => {
   useEffect(() => {
     if(!!name && !!subject && !!email && !!message) {
       setValidForm(true)
+    } else {
+      setValidForm(false)
     }
   }, [name, subject, email, message])
   return (
